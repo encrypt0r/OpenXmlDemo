@@ -30,6 +30,7 @@ namespace OpenXmlDemo
                 // document.Close();
 
                 // Returns an empty array if the document isn't closed
+                // stream.Position = 0; // Some places suggested this, unfortunately this doesn't seem to help.
                 var bytes = stream.ToArray(); 
                 File.WriteAllBytes(@"D:\sheet.xlsx", bytes);
             }
